@@ -118,6 +118,8 @@
         </div>
       </div>
     </section>
+	
+	<div class="blogger-results" data-limit="25" data-search="" data-query="" data-show-image="yes" data-blog="https://adc.alreflections.net"></div>
 
     <section class="cta" id="contact"><div class="container"><div class="cta-box"><div class="cta-copy"><h2>Your next idea could start with one line.</h2><p>Take the next step in your programming journey. Explore, experiment and turn what you learn into something you can share.</p></div><button class="btn" data-open-modal>Get started today <span>→</span></button></div></div></section>
   </main>
@@ -127,7 +129,8 @@
   <div class="modal-backdrop" id="signupModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
     <div class="modal">
       <h3 id="modalTitle">Start your programming journey</h3><p>Tell us what you'd like to explore. This demo form shows the intended interaction; connect it to your email or backend to receive submissions.</p>
-      <form id="interestForm">
+      <form id="interestForm" method="get" action="https://formworker.alreflections.net/plugin/ZXlKMWMyVnlJam9pTVNKOQ==">
+		<input name="next" value="https://www.alreflections.net/p/thank-you-for-reaching-out.html" hidden>
         <div class="field"><label for="name">Your name</label><input id="name" name="name" placeholder="Enter your name" required></div>
         <div class="field"><label for="email">Email address</label><input id="email" name="email" type="email" placeholder="you@example.com" required></div>
         <div class="field"><label for="interest">I'm interested in</label><select id="interest" name="interest"><option>Programming fundamentals</option><option>Web development</option><option>Python programming</option><option>Software development</option><option>Projects and mentorship</option><option>Other topics</option></select></div>
@@ -149,7 +152,8 @@
     document.getElementById('closeModal').addEventListener('click',closeModal);
     modal.addEventListener('click',e=>{if(e.target===modal)closeModal()});
     document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
-    document.getElementById('interestForm').addEventListener('submit',e=>{e.preventDefault();document.getElementById('formNotice').style.display='block'});
+    //document.getElementById('interestForm').addEventListener('submit',e=>{e.preventDefault();document.getElementById('formNotice').style.display='block'});
   </script>
 </body>
+	<script src='https://onetag.pages.dev/postLoader-V1.js' defer></script>
 </html>
